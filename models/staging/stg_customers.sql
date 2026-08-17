@@ -5,4 +5,4 @@ select
     c_phone as phone,
     c_acctbal as account_balance,
     c_mktsegment as market_segment
-from snowflake_sample_data.tpch_sf1.customer
+FROM {{ source('raw_data', 'customer') }}
